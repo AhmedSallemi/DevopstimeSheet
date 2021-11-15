@@ -36,6 +36,11 @@ public class Employe implements Serializable {
 
 	private boolean isActif;
 	
+	
+	
+	
+	
+	
 	@Enumerated(EnumType.STRING)
 	//@NotNull
 	private Role role;
