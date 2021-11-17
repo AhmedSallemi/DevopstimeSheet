@@ -35,14 +35,11 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	EmployeRepository employeRepository;
 	
 	public int ajouterMission(Mission mission) {
-		try {
-			missionRepository.save(mission);
-			logger.info("In ajouterMission() : ");
-			logger.debug("Je viens de lancer l'ajout. " + mission.getId());
-		}
-		catch (Exception e) {
-			logger.error("Erreur dans getAllPrducts() : " + e);  }
-			logger.info("Out ajouterMission() : ");
+//		logger.error("Erreur dans getAllPrducts() : " + e);  }
+//		logger.info("Out ajouterMission() : ");
+//		logger.info("In ajouterMission() : ");
+//		logger.debug("Je viens de lancer l'ajout. " + mission.getId());
+		missionRepository.save(mission);
 		return mission.getId();
 	}
     
