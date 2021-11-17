@@ -1,4 +1,5 @@
 package tn.esprit.spring.services;
+import java.util.logging.Logger;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,6 +24,11 @@ import tn.esprit.spring.repository.TimesheetRepository;
 @Service
 public class EmployeServiceImpl implements IEmployeService {
 
+	
+	private static final Logger logger = Logger.getLogger("EmployeServiceImpl.class");
+	
+	
+	
 	@Autowired
 	EmployeRepository employeRepository;
 	@Autowired
@@ -33,9 +39,19 @@ public class EmployeServiceImpl implements IEmployeService {
 	TimesheetRepository timesheetRepository;
 
 	public int ajouterEmploye(Employe employe) {
+		try{
+			
+		
 		employeRepository.save(employe);
+		logger.info("Out ajouterEmploye() without errors.");
 		return employe.getId();
 	}
+		catch  (Exception e) {
+				logger.info("Erreur dans ajouterEmploye() : " + e);
+				}
+			return 0;
+		}
+	
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
 		Optional<Employe> optional = employeRepository.findById(employeId);
