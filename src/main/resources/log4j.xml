@@ -12,7 +12,7 @@ MM-dd HH:mm:ss} %l:%L - %m%n" /> </layout>
 
 <appender name="file" class="org.apache.log4j.RollingFileAppender">
 <param name="append" value="true" /> <param name="maxFileSize" value="10MB" />
-<param name="maxBackupIndex" value="10" /> <param name="file" value="C:/logs/timesheet.log"
+<param name="maxBackupIndex" value="10" /> <param name="file" value="./logs/timesheet.log"
 />
 
 <layout class="org.apache.log4j.PatternLayout"> <param name="ConversionPattern" value="%d{yyyy-

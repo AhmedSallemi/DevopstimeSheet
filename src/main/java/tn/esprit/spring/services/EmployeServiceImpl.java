@@ -41,7 +41,7 @@ public class EmployeServiceImpl implements IEmployeService {
 			l.info("in ajouter Employe");
 			l.debug("Je vais commencer l'ajout");
 			employeRepository.save(employe);
-			l.info("out ajouter Employe");
+			l.info("ou ajouter Employe");
 			return employe.getId();
 		}
 		catch (Exception e) { l.error("Erreur dans ajouterEmploye() : " , e); }
