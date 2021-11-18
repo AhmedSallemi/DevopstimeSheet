@@ -60,6 +60,7 @@ public class EmployeServiceImplTest {
 		int a = iemployeservice.ajouterEmploye(employe);
 		assertEquals(employe.getId(), a);
 	}
+	
 
 	@Test
 	public void testajouterContrat() {
