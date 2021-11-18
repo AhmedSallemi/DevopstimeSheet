@@ -1,12 +1,13 @@
 package tn.esprit.spring;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class DevopsTimeSheetApplicationTests {
 
-	@Test
+	@Test(expected = Test.None.class)
+
 	void contextLoads() {
 	}
 
