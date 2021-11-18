@@ -8,7 +8,7 @@ class DevopsTimeSheetApplicationTests {
 
 	@Test(expected = Test.None.class)
 
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
