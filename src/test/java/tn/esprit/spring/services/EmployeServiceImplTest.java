@@ -83,7 +83,7 @@ public class EmployeServiceImplTest {
 		Employe employe1 = new Employe("Ahmed", "Sallemi", "Ahmed.sellami@esprit.tn");
 		int id_emp = iemployeservice.ajouterEmploye(employe1);
 		iemployeservice.deleteEmployeById(id_emp);
-		Optional optional = empRepo.findById(id_emp);
+		Optional optional = empRepo.findById(id_emp); // presence facultatif
 		assertEquals(Optional.empty(), optional);
 			
 	}
@@ -95,6 +95,7 @@ public class EmployeServiceImplTest {
 		iemployeservice.deleteContratById(cont.getReference());
 		assertNotEquals(cont.getReference(), contrat.getReference());
 	}
+	
 /*
 	@Test
 	public void testmettreAjourEmailByEmployeId() {
