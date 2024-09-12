@@ -81,6 +81,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		}
 	}
 
+	
 
 	public Entreprise getEntrepriseById(int entrepriseId) {
 		Optional<Entreprise> optional = entrepriseRepoistory.findById(entrepriseId);
