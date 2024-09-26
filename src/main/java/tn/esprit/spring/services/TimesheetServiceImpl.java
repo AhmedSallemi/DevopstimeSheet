@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
@@ -36,6 +35,10 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	EmployeRepository employeRepository;
 	
 	public int ajouterMission(Mission mission) {
+//		logger.error("Erreur dans getAllPrducts() : " + e);  }
+//		logger.info("Out ajouterMission() : ");
+//		logger.info("In ajouterMission() : ");
+//		logger.debug("Je viens de lancer l'ajout. " + mission.getId());
 		missionRepository.save(mission);
 		return mission.getId();
 	}
